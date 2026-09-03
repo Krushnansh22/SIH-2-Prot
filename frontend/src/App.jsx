@@ -17,7 +17,7 @@ const MainLayout = () => {
   const { activeTab } = useAuth();
 
   return (
-    <div className="min-h-screen bg-[#090d16] text-slate-100 flex flex-col selection:bg-cyan-500/30 selection:text-cyan-200">
+    <div className="min-h-screen bg-[var(--bg-app)] text-[var(--text)] flex flex-col selection:bg-[#f7d77a]/60 selection:text-[#2d241b]">
       <Navbar />
 
       <div className="flex-1 flex overflow-hidden">

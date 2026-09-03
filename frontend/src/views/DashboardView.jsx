@@ -247,20 +247,20 @@ export const DashboardView = () => {
               <div
                 key={doc.id}
                 onClick={() => setSelectedDocForPreview(doc)}
-                className="p-3.5 rounded-2xl bg-slate-900/70 hover:bg-slate-800/80 border border-slate-800/90 hover:border-cyan-500/40 transition-all cursor-pointer flex items-center justify-between gap-3 group"
+                className="p-3.5 rounded-2xl bg-white hover:bg-white border border-[#e7d7a8] hover:border-[#d79a2d] transition-all cursor-pointer flex items-center justify-between gap-3 group"
               >
                 <div className="flex items-center gap-3 min-w-0">
                   <div className={`p-2 rounded-xl shrink-0 ${
-                    doc.is_tampered ? 'bg-rose-950 text-rose-300' : 'bg-cyan-950/80 text-cyan-300'
+                    doc.is_tampered ? 'bg-rose-950 text-rose-300' : 'bg-white border border-[#e7d7a8] text-black'
                   }`}>
-                    {doc.is_tampered ? <AlertOctagon className="w-4 h-4 text-rose-400" /> : <FileText className="w-4 h-4 text-cyan-400" />}
+                    {doc.is_tampered ? <AlertOctagon className="w-4 h-4 text-rose-400" /> : <FileText className="w-4 h-4 text-black" />}
                   </div>
                   <div className="min-w-0">
-                    <div className="text-xs font-bold text-slate-100 group-hover:text-cyan-300 truncate transition-colors">
+                    <div className="text-xs font-bold text-black group-hover:text-black truncate transition-colors">
                       {doc.title}
                     </div>
                     <div className="text-[11px] text-slate-400 flex items-center gap-2 mt-0.5">
-                      <span className="font-mono text-cyan-400 font-medium">Case: {doc.case_number}</span>
+                      <span className="font-mono text-black font-medium">Case: {doc.case_number}</span>
                       <span>•</span>
                       <span>{doc.document_type}</span>
                     </div>
@@ -268,7 +268,7 @@ export const DashboardView = () => {
                 </div>
 
                 <div className="flex items-center gap-2 shrink-0">
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950 border border-slate-800 text-slate-300">
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-white border border-[#e7d7a8] text-black">
                     Block #{doc.blockchain_block_index}
                   </span>
                   <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${
@@ -276,7 +276,7 @@ export const DashboardView = () => {
                       ? 'bg-rose-950 border-rose-600 text-rose-300'
                       : doc.status === 'PENDING_REVIEW'
                       ? 'bg-amber-950 border-amber-600 text-amber-300'
-                      : 'bg-emerald-950 border-emerald-600 text-emerald-300'
+                      : 'bg-white border-[#e7d7a8] text-black'
                   }`}>
                     {doc.is_tampered ? 'TAMPERED' : doc.status}
                   </span>
@@ -308,21 +308,21 @@ export const DashboardView = () => {
             {recentLogs.map((log) => (
               <div
                 key={log.id}
-                className="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 text-xs space-y-1"
+                className="p-3 rounded-xl bg-white border border-[#e7d7a8] text-xs space-y-1"
               >
                 <div className="flex items-center justify-between">
-                  <span className="font-bold text-slate-200 font-mono text-[11px] flex items-center gap-1.5">
+                  <span className="font-bold text-black font-mono text-[11px] flex items-center gap-1.5">
                     <span className={`w-1.5 h-1.5 rounded-full ${
-                      log.severity === 'CRITICAL' ? 'bg-rose-500 animate-ping' : log.severity === 'HIGH' ? 'bg-amber-500' : 'bg-cyan-400'
+                      log.severity === 'CRITICAL' ? 'bg-rose-500 animate-ping' : log.severity === 'HIGH' ? 'bg-amber-500' : 'bg-black'
                     }`}></span>
                     {log.event_type}
                   </span>
-                  <span className="text-[10px] text-slate-400 font-mono">{log.timestamp.split(' ')[1]}</span>
+                  <span className="text-[10px] text-black font-mono">{log.timestamp.split(' ')[1]}</span>
                 </div>
-                <p className="text-[11px] text-slate-400 truncate">{log.details}</p>
-                <div className="text-[10px] text-slate-500 font-mono flex items-center justify-between pt-0.5">
+                <p className="text-[11px] text-black truncate">{log.details}</p>
+                <div className="text-[10px] text-black font-mono flex items-center justify-between pt-0.5">
                   <span>Officer: {log.user_badge}</span>
-                  <span className="text-emerald-400">{log.status}</span>
+                  <span className="text-black">{log.status}</span>
                 </div>
               </div>
             ))}
