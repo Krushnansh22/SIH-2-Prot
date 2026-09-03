@@ -234,7 +234,7 @@ export const UploadView = () => {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 rounded-3xl bg-[#0c1220] border border-[#1e2e4a]">
         <div>
           <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-cyan-950/80 border border-cyan-800 text-[11px] font-semibold text-cyan-300">
-            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
+            <Sparkles className="w-3.5 h-3.5 text-black" />
             AI Document Intelligence & Ingestion Pipeline
           </div>
           <h2 className="text-2xl font-extrabold text-slate-100 tracking-tight mt-1">
@@ -391,7 +391,7 @@ export const UploadView = () => {
             <div className="p-6 rounded-3xl bg-[#0c1220] border border-[#1e2e4a] space-y-5">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-cyan-400" />
+                  <Sparkles className="w-4 h-4 text-black" />
                   <h3 className="text-sm font-bold text-slate-200 uppercase tracking-wider">
                     AI Extraction & Classification Result
                   </h3>
