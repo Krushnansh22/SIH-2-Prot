@@ -65,7 +65,7 @@ export const AuthProvider = ({ children }) => {
 
   const fetchMetrics = async () => {
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/dashboard/metrics', {
+      const res = await fetch('http://sih-2-prot.onrender.com/api/dashboard/metrics', {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.ok) {

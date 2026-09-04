@@ -51,7 +51,7 @@ npm install
 npm run dev
 ```
 
-Open the application at <http://localhost:5173/>. API documentation is available at <http://127.0.0.1:8000>.
+Open the application at <http://localhost:5173/>. API documentation is available at <http://sih-2-prot.onrender.com>.
 
 ## Demo Access
 
@@ -82,5 +82,5 @@ The FastAPI service exposes authentication, document upload and search, verifica
 ## Notes
 
 - Application data is initialized in memory from `backend/seed_data.py` and resets when the backend restarts.
-- The frontend currently targets `http://127.0.0.1:8000` for API requests.
+- The frontend currently targets `http://sih-2-prot.onrender.com` for API requests.
 - Configure secure secrets, persistent storage, production CORS, authentication, and deployment controls before any real-world use.

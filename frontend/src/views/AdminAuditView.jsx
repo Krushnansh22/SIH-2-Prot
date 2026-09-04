@@ -46,8 +46,8 @@ export const AdminAuditView = () => {
     setLoading(true);
     try {
       const [logsRes, anomaliesRes] = await Promise.all([
-        fetch('http://127.0.0.1:8000/api/audit/logs', { headers: { Authorization: `Bearer ${token}` } }),
-        fetch('http://127.0.0.1:8000/api/admin/anomalies', { headers: { Authorization: `Bearer ${token}` } })
+        fetch('http://sih-2-prot.onrender.com/api/audit/logs', { headers: { Authorization: `Bearer ${token}` } }),
+        fetch('http://sih-2-prot.onrender.com/api/admin/anomalies', { headers: { Authorization: `Bearer ${token}` } })
       ]);
 
       if (logsRes.ok) {

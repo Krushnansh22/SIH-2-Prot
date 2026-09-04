@@ -41,7 +41,7 @@ export const VaultSearchView = () => {
   const performSearch = async (searchQuery = query, mode = searchMode) => {
     setLoading(true);
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/documents/search', {
+      const res = await fetch('http://sih-2-prot.onrender.com/api/documents/search', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
