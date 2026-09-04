@@ -30,8 +30,8 @@ export const DashboardView = () => {
       setLoading(true);
       try {
         const [docsRes, logsRes] = await Promise.all([
-          fetch('http://sih-2-prot.onrender.com/api/documents', { headers: { Authorization: `Bearer ${token}` } }),
-          fetch('http://sih-2-prot.onrender.com/api/audit/logs', { headers: { Authorization: `Bearer ${token}` } })
+          fetch('https://sih-2-prot.onrender.com/api/documents', { headers: { Authorization: `Bearer ${token}` } }),
+          fetch('https://sih-2-prot.onrender.com/api/audit/logs', { headers: { Authorization: `Bearer ${token}` } })
         ]);
 
         if (docsRes.ok) {

@@ -36,7 +36,7 @@ export const VerificationView = () => {
 
   const fetchDocs = async () => {
     try {
-      const res = await fetch('http://sih-2-prot.onrender.com/api/documents', {
+      const res = await fetch('https://sih-2-prot.onrender.com/api/documents', {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.ok) {
@@ -61,7 +61,7 @@ export const VerificationView = () => {
     setLoading(true);
     try {
       const [verifyRes, custodyRes] = await Promise.all([
-        fetch('http://sih-2-prot.onrender.com/api/blockchain/verify-hash', {
+        fetch('https://sih-2-prot.onrender.com/api/blockchain/verify-hash', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ export const VerificationView = () => {
           },
           body: JSON.stringify({ document_id: docId })
         }),
-        fetch(`http://sih-2-prot.onrender.com/api/documents/${docId}/custody`, {
+        fetch(`https://sih-2-prot.onrender.com/api/documents/${docId}/custody`, {
           headers: { Authorization: `Bearer ${token}` }
         })
       ]);
@@ -97,7 +97,7 @@ export const VerificationView = () => {
     if (!selectedDocId) return;
     setTamperLoading(true);
     try {
-      const res = await fetch('http://sih-2-prot.onrender.com/api/documents/simulate-tamper', {
+      const res = await fetch('https://sih-2-prot.onrender.com/api/documents/simulate-tamper', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

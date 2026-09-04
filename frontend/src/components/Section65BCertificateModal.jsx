@@ -27,7 +27,7 @@ export const Section65BCertificateModal = () => {
     const fetchCert = async () => {
       setLoading(true);
       try {
-        const res = await fetch(`http://sih-2-prot.onrender.com/api/documents/${selectedDocForCert.id}/section65b`, {
+        const res = await fetch(`https://sih-2-prot.onrender.com/api/documents/${selectedDocForCert.id}/section65b`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         if (res.ok) {

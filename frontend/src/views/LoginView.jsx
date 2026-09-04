@@ -45,7 +45,7 @@ export const LoginView = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch('http://sih-2-prot.onrender.com/api/auth/verify-mfa', {
+      const res = await fetch('https://sih-2-prot.onrender.com/api/auth/verify-mfa', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

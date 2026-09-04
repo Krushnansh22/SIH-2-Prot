@@ -85,7 +85,7 @@ export const UploadView = () => {
 
   const fetchPendingQueue = async () => {
     try {
-      const res = await fetch('http://sih-2-prot.onrender.com/api/documents?flagged_only=true', {
+      const res = await fetch('https://sih-2-prot.onrender.com/api/documents?flagged_only=true', {
         headers: { Authorization: `Bearer ${token}` }
       });
       if (res.ok) {
@@ -178,7 +178,7 @@ export const UploadView = () => {
       formData.append('case_number', caseNumber);
       formData.append('confidentiality', 'CONFIDENTIAL');
 
-      const res = await fetch('http://sih-2-prot.onrender.com/api/documents/upload', {
+      const res = await fetch('https://sih-2-prot.onrender.com/api/documents/upload', {
         method: 'POST',
         headers: { Authorization: `Bearer ${token}` },
         body: formData
@@ -204,7 +204,7 @@ export const UploadView = () => {
 
   const handleReviewAction = async (docId, action) => {
     try {
-      const res = await fetch('http://sih-2-prot.onrender.com/api/admin/review-flagged', {
+      const res = await fetch('https://sih-2-prot.onrender.com/api/admin/review-flagged', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
